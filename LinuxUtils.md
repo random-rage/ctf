@@ -1,8 +1,18 @@
 # Linux Utilities
 
+## Просмотрщики
+
+[strings](https://linux.die.net/man/1/strings) - unix-утилита для поиска печатных строк.
+
+[Rabin2](https://radare.gitbooks.io/radare2book/content/rabin2/intro.html) - утилита в составе Radare2, показывает информацию о бинарном файле (см. [ниже](#Radare2)).
+
+
+
 ## Отладчики
 
 ![Есть GUI](img/GUI.png) [EDB](https://github.com/eteran/edb-debugger) - кроссплатформенный отладчик для x86 и x86-64, на данный момент хорошо заточен только под Linux.
+
+
 
 ### Radare2
 
