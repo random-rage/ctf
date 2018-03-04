@@ -4,6 +4,12 @@
 
 [strings](https://linux.die.net/man/1/strings) - unix-утилита для поиска печатных строк.
 
+[ldd](https://linux.die.net/man/1/ldd) - bash-скрипт для просмотра зависимостей от динамически подключаемых библиотек (shared libraries). Не стоит использовать для бинарей, к которым нет доверия.
+
+[readelf](https://linux.die.net/man/1/readelf) - утилита для просмотра информации об ELF-файле.
+
+[objdump](https://linux.die.net/man/1/objdump) - утилита для просмотра информации об объектных файлах.
+
 [Rabin2](https://radare.gitbooks.io/radare2book/content/rabin2/intro.html) - утилита в составе Radare2, показывает информацию о бинарном файле (см. [ниже](#Radare2)).
 
 
@@ -11,6 +17,14 @@
 ## Отладчики
 
 ![Есть GUI](img/GUI.png) [EDB](https://github.com/eteran/edb-debugger) - кроссплатформенный отладчик для x86 и x86-64, на данный момент хорошо заточен только под Linux.
+
+![Есть GUI](img/GUI.png) [GDBgui](https://gdbgui.com/) - графический интерфейс для известного отладчика GNU Debugger.
+
+
+
+### Скрытие отладчиков
+
+[ScyllaHide](https://github.com/x64dbg/ScyllaHide) - библиотека для скрытия отладчиков в ring3 (usermode), хукает различные функции для скрытия отладки.
 
 
 
@@ -50,3 +64,9 @@ r2 <файл>               # Запуск
 ## Символическое выполнение
 
 [angr](http://angr.io/) (использует [z3](https://github.com/Z3Prover/z3)) - фреймворк для анализа бинарей путём символьного (символического) выполнения. Действует как виртуальная машина со своей операционной системой.
+
+
+
+## Обфускаторы
+
+[Tigress](http://tigress.cs.arizona.edu/) - обфускатор C под Mac и Linux.
