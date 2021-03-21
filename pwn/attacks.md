@@ -61,7 +61,7 @@ void play() {
    или дополнительно `XOR`ится (Microsoft) с адресом, лежащим в RBP:
 
    ```assembly
-   sub rsp, 8h
+   sub	rsp, 8h
    mov	rax, qword ptr [__security_cookie] 
    xor	rax, rbp 
    mov	qword ptr [rbp], rax
@@ -70,9 +70,9 @@ void play() {
 3. Перед возвратом из функции положенное на стек значение сверяется с хранимым:
 
    ```assembly
-   mov		rax, [rbp+canary]
-   sub		rax, fs:28h
-   jz		short locret_401197
+   mov	rax, [rbp+canary]
+   sub	rax, fs:28h
+   jz	short locret_401197
    call	__stack_chk_fail # Выводит *** stack smashing detected *** и завершает программу
    locret_401197:
    leave
@@ -82,10 +82,10 @@ void play() {
    или дополнительно `XOR`ится (Microsoft) с адресом, лежащим в RBP:
 
    ```assembly
-   mov		rcx, qword ptr [rbp]
-   xor		rcx, rbp 
+   mov	rcx, qword ptr [rbp]
+   xor	rcx, rbp 
    call	__security_check_cookie
-   add		esp, 8h
+   add	esp, 8h
    ```
 
 4. Если значения не равны, программа немендленно завершается с ошибкой.
